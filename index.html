@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lily Jamisolamin — UI Designer | Dark/Light Mode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-logo">
+      <a href="#hero" style="text-decoration: none">Lily J.</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </span>
+      </label>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#skills" onclick="closeMobile()">Skills</a>
+    <a href="#education" onclick="closeMobile()">Education</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <section id="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Hello, it's me</p>
+      <h1 class="hero-name">
+        <span class="name-lily">
+          <span class="letter-lily">L</span><span class="letter-lily">i</span><span class="letter-lily">l</span><span
+            class="letter-lily">y</span>
+        </span>
+        <span class="name-jamisolamin" id="surnameSpan">
+          <span class="typed-text" id="typedSurname"></span>
+          <span class="typed-cursor" id="cursor"></span>
+        </span>
+      </h1>
+      <p class="hero-role">UI Designer</p>
+      <p class="hero-desc">
+        I design and develop clean, user-focused interfaces and functional web
+        applications that leave lasting impressions.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Work</a><a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://www.facebook.com/profile.php?id=61572370774586&sk=about" target="_blank" class="social-dot"
+          aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/ww.lalaly/" target="_blank" class="social-dot" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/lalaly2790" target="_blank" class="social-dot" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-image-inner" id="profileImage">
+        <img src="images/profile.png" alt="LILY" />
+        <canvas id="trailCanvas" class="trail-canvas"></canvas>
+        <div class="spotlight" id="spotlightLayer"></div>
+      </div>
+      <span class="hero-image-badge">Available for work ✦</span>
+      <div class="glow-ring" id="glowRing"></div>
+    </div>
+  </section>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">User Experience</span><span class="marquee-item">UI Design</span><span
+        class="marquee-item">Web Design</span><span class="marquee-item">Frontend Dev</span><span
+        class="marquee-item">Figma</span><span class="marquee-item">Prototyping</span><span class="marquee-item">User
+        Experience</span><span class="marquee-item">UI Design</span><span class="marquee-item">Web Design</span><span
+        class="marquee-item">Frontend Dev</span><span class="marquee-item">Figma</span><span
+        class="marquee-item">Prototyping</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="about-img-wrap reveal">
+      <img src="images/about.png" alt="Lily Jamisolamin" />
+    </div>
+    <div class="about-content reveal">
+      <span class="section-tag">About Me</span>
+      <h2 class="section-title">About <em>Me</em></h2>
+      <p class="about-desc">
+        A detail-oriented and creative individual seeking an opportunity as a
+        UI/UX Designer. With a strong interest in user-centered design,
+        digital experiences, and problem-solving, there is a commitment to
+        creating intuitive, visually clear, and effective interfaces. Eager to
+        contribute to a professional team, apply design principles to real
+        projects, and continuously grow through learning and hands-on
+        experience in the field.
+      </p>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Years Exp.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="skills-header reveal">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title" style="color: var(--text-primary)">
+        My <em>Skills</em>
+      </h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-section">
+        <div class="skill-section-title">Designing Tools</div>
+        <div class="skill-list">
+          <span class="skill-tag">Figma</span><span class="skill-tag">Adobe XD</span><span
+            class="skill-tag">Canva</span><span class="skill-tag">Photoshop</span><span
+            class="skill-tag">Illustrator</span>
+        </div>
+      </div>
+      <div class="skill-section">
+        <div class="skill-section-title">Tech Stack</div>
+        <div class="skill-list">
+          <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span
+            class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span
+            class="skill-tag">Node.js</span>
+        </div>
+      </div>
+      <div class="skill-section">
+        <div class="skill-section-title">Design Practice</div>
+        <div class="skill-list">
+          <span class="skill-tag">Wireframing</span><span class="skill-tag">Prototyping</span><span
+            class="skill-tag">User Research</span><span class="skill-tag">Usability Testing</span><span
+            class="skill-tag">Design Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="soft-skills">
+
+    <div class="soft-skills-header reveal">
+      <span class="section-tag" style="background: var(--accent)">Soft Skills</span>
+      <h2 class="section-title">What I Bring</h2>
+    </div>
+
+    <div class="soft-cards">
+
+      <!-- CARD 1 -->
+      <div class="soft-card reveal">
+
+        <div class="particles">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="soft-left">
+          <div class="soft-card-num">01</div>
+          <div class="soft-card-title">Attention to Detail</div>
+        </div>
+
+        <div class="soft-right">
+          <div class="soft-card-desc">
+            Ensuring designs are clean, consistent, and well-structured.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="soft-card reveal">
+
+        <div class="particles">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="soft-left">
+          <div class="soft-card-num">02</div>
+          <div class="soft-card-title">Teamwork</div>
+        </div>
+
+        <div class="soft-right">
+          <div class="soft-card-desc">
+            Working well with others to improve design output.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="soft-card reveal">
+
+        <div class="particles">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="soft-left">
+          <div class="soft-card-num">03</div>
+          <div class="soft-card-title">Adaptability</div>
+        </div>
+
+        <div class="soft-right">
+          <div class="soft-card-desc">
+            Quickly adjusting to new design tools, trends, and project requirements.
+          </div>
+
+          <div class="particles"></div>
+        </div>
+
+
+  </section>
+  <section id="education">
+    <div class="edu-header reveal">
+      <span class="section-tag">Background</span>
+      <h2 class="section-title" style="color: var(--text-primary)">
+        Education
+      </h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-logo">
+          <img src="images/sc logo1.png" alt="school logo" style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="edu-name">Junior High School</div>
+        <div class="edu-school">Opol National Secondary Technical School</div>
+        <div class="edu-year">2018–2022</div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-logo">
+          <img src="images/sc logo1.png" alt="school logo" style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="edu-name">Senior High School</div>
+        <div class="edu-school">Opol National Secondary Technical School</div>
+        <div class="edu-detail">
+          <strong>Strand:</strong><br />Humanities And Social Science
+        </div>
+        <div class="edu-year">2022–2024</div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-logo">
+          <img src="images/sc logo2.png" alt="school logo" style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="edu-name">College</div>
+        <div class="edu-school">Opol National Community College</div>
+        <div class="edu-detail">
+          <strong>Program:</strong> <br />Bachelor Of Science In Information
+          Technology
+        </div>
+        <div class="edu-year">2026</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="projects-header reveal">
+      <span class="section-tag" style="background: var(--accent)">Portfolio</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-scroll-wrap reveal">
+      <div class="projects-track" id="projectsTrack">
+        <div class="project-card">
+          <img class="project-Image-bg" src="images/POrtfolio.png" alt="Portfolio Website" />
+          <div class="project-info">
+            <span class="project-tag">UI Design</span>
+            <div class="project-title">Portfolio Website</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-Image-bg" src="images/dashboard.jpg" alt="Dashboard Interface" />
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <div class="project-title">Dashboard Interface</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-Image-bg" src="images/mobile app design.jpg" alt="Mobile App Design" />
+          <div class="project-info">
+            <span class="project-tag">UX Design</span>
+            <div class="project-title">Mobile App Design</div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-Image-bg" src="images/commerce.jpg" alt="E-commerce Platform" />
+          <div class="project-info">
+            <span class="project-tag">Frontend</span>
+            <div class="project-title">E-commerce Platform</div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-controls">
+        <button class="scroll-btn" id="prevBtn">←</button><button class="scroll-btn" id="nextBtn">→</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-grid">
+      <div>
+        <h2 class="contact-info-title reveal">Get In<br />Touch</h2>
+        <div class="contact-detail reveal">
+          <div class="contact-item">
+            <label>Email</label><a href="mailto:Lilyjamisolamin0@gmail.com">Lilyjamisolamin0@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <label>Phone</label><span>09569268642</span>
+          </div>
+          <div class="contact-item">
+            <label>Address</label><span>Opol, Misamis Oriental, Philippines</span>
+          </div>
+        </div>
+        <div class="contact-socials reveal">
+          <a href="https://www.facebook.com/profile.php?id=61572370774586&sk=about" target="_blank"
+            class="contact-social" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/ww.lalaly/" target="_blank" class="contact-social" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://x.com/lalaly2790" target="_blank" class="contact-social" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label>Name</label><input type="text" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label>Phone</label><input type="tel" placeholder="Your phone number" />
+        </div>
+        <div class="form-group">
+          <label>Email</label><input type="email" placeholder="Your email" required />
+        </div>
+        <div class="form-group">
+          <label>Message</label><textarea placeholder="Tell me about your project…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Lily Jamisolamin</span>
+    <span>UI Designer & Frontend Developer</span>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/profile.php?id=61572370774586&sk=about" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/ww.lalaly/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com/lalaly2790" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
